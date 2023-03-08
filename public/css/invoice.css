@@ -1,0 +1,369 @@
+:root {
+  font-size: 10px;
+  --dark-gray: #222222;
+  --brand-green: #00cc6d;
+  --green: #00ff00;
+  --brand-red: #fd4747;
+  --bg-green: #f4fbf6;
+  --bg-red: #fff0f0;
+  --mid-gray: #8f8f8f;
+  --line-gray: #f5f5f5;
+  --light-gray: #c8c8c8;
+  --bg-gray: #f6f6f6;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap");
+
+body {
+  position: relative;
+}
+
+* {
+  font-size: 16px;
+  font-family: "Inter", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.clipboard-logo-sec {
+  position: fixed;
+  top: 00px;
+  left: 0px;
+  padding: 30px 250px 30px 150px;
+  background-image: url(../images/brand-bg.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.clipboard-logo-sec img {
+  width: 150px;
+  height: auto;
+}
+
+.about-clipboard {
+  margin-top: 30px;
+  position: fixed;
+  top: 220px;
+  left: 150px;
+}
+
+.about-facility {
+  position: fixed;
+  right: 150px;
+  top: 260px;
+  width: 270px;
+}
+
+.about-clipboard h5,
+.about-facility h5 {
+  color: #00cc6d;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.about-clipboard h2,
+.about-facility h2 {
+  color: #222222;
+  font: 24px "Inter";
+  font-weight: 700;
+  margin: 8px 0;
+}
+
+.about-clipboard p,
+.about-facility p {
+  display: -webkit-box;
+  display: flex;
+  align-items: center;
+  -webkit-box-pack: flex-start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  font: 14px "Inter";
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.about-clipboard p span,
+.about-facility p span {
+  font: 14px "Inter";
+  font-weight: 700;
+  color: #222222;
+  margin-right: 3px;
+}
+
+.facility-sec {
+  position: fixed;
+  top: 50px;
+  right: 150px;
+  width: 270px;
+  height: 500px;
+  text-align: center;
+}
+
+.facility-sec img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.facility-sec h2 {
+  font: 16px "Inter";
+  font-weight: 700;
+  color: #222222;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.facility-sec div {
+  display: -webkit-box;
+  display: flex;
+  align-items: center;
+  -webkit-box-pack: space-between;
+  -webkit-justify-content: space-between;
+  -webkit-box-align: center;
+  justify-content: space-between;
+  box-align: center;
+  line-height: 1.8;
+}
+
+.facility-sec div span {
+  font-size: 16px;
+  color: #222222;
+  -webkit-box-flex: 1;
+  text-align: left;
+  display: block;
+}
+
+.facility-sec div div {
+  font: 16px "Inter";
+  font-weight: 400;
+  color: #222222;
+  text-align: right;
+  -webkit-box-flex: 0;
+}
+
+.terms-conditions {
+  margin: 100px 0;
+  position: relative;
+}
+
+.terms-conditions .sign {
+  position: absolute;
+  top: -180px;
+  left: 150px;
+}
+
+.terms-conditions .sign img {
+  width: 180px;
+  height: auto;
+}
+
+.terms-conditions .hr {
+  width: 100%;
+  height: 1px;
+  background-color: #222222;
+}
+
+.terms-conditions span {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  color: #222222;
+  margin-top: 5px;
+}
+
+.terms-conditions h6 {
+  text-align: left;
+  color: #00cc6d;
+  font: 16px "Inter";
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.terms-conditions p {
+  color: #222222;
+  font: 15px "Inter";
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.footer {
+  background-color: #222222;
+  padding: 30px 120px;
+  display: -webkit-box;
+  display: flex;
+  align-items: center;
+  -webkit-box-align: center;
+  -webkit-box-pack: space-between;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.footer-items {
+  display: -webkit-box;
+  display: flex;
+  align-items: center;
+  -webkit-box-pack: flex-start;
+  -webkit-box-align: center;
+  justify-content: flex-start;
+  font-weight: 400;
+  color: white;
+  -webkit-box-flex: 1;
+}
+
+.footer-item {
+  display: -webkit-box;
+  display: flex;
+  align-items: center;
+  -webkit-box-pack: flex-start;
+  -webkit-box-align: center;
+  justify-content: flex-start;
+  box-align: center;
+  margin-right: 30px;
+  font: 14px "Inter";
+}
+
+.footer-items span {
+  display: block;
+  border-radius: 5px;
+  background-color: #fd4747;
+  padding: 5px;
+  margin-right: 8px;
+}
+
+.footer-items span div {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 23px;
+  height: 23px;
+  margin: 0;
+}
+
+.footer-item:nth-child(2) span div {
+  background-image: url(../images/phone-call.png);
+}
+
+.footer-item:nth-child(1) span div {
+  background-image: url(../images/email.png);
+}
+
+.value-brand {
+  text-align: right;
+  color: white;
+  font: 18px "Inter";
+  font-weight: 400;
+}
+
+.table {
+  width: 100%;
+}
+
+.regular-title {
+  font-size: 22px;
+  color: #222222;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 400px;
+  margin-bottom: 15px;
+}
+
+.table thead tr {
+  margin-bottom: 10px;
+}
+
+.invoice {
+  padding: 70px 150px 60px 150px;
+}
+
+.table thead tr th {
+  background-color: #fd4747;
+  font: 12px "Inter";
+  font-weight: 700;
+  color: white;
+  text-align: left;
+  padding: 15px 10px;
+}
+
+table {
+  margin-bottom: 100px;
+}
+
+.table tbody td:nth-child(2) div {
+  display: block;
+  font: 12px "Inter";
+  font-weight: 400;
+  padding: 0;
+  margin-right: 1rem;
+}
+
+.table tbody td:nth-child(5) {
+  align-items: center;
+  flex-wrap: wrap;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+}
+
+.table tbody td .agent {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  white-space: nowrap;
+  padding: 0;
+  -webkit-box-flex: 0 !important;
+  font-size: 12px;
+  display: -webkit-box;
+  -webkit-box-pack: flex-start;
+  -webkit-box-align: center;
+}
+
+.table tbody td .agent span {
+  /* background-image: url("http://localhost:8080/agent/person01.jpg"); */
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  margin-right: 4px;
+  display: block;
+}
+
+.table tbody tr td {
+  color: #222222;
+  text-align: left;
+  padding: 7px 10px;
+  font: 12px "Inter";
+  font-weight: 400;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f6f6f6;
+}
+
+.table-summary,
+.table-summary-black {
+  background-color: white !important;
+}
+
+.table-summary td,
+.table-summary-black td {
+  font-weight: 700 !important;
+  padding: 10px 10px;
+}
+
+.table-summary-black td:nth-child(5),
+.table-summary-black td:nth-child(6) {
+  background-color: white !important;
+  background-color: #222222 !important;
+  color: white;
+  padding: 10px 10px;
+  font-weight: 900 !important;
+}

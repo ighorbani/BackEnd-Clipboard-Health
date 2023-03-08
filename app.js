@@ -13,6 +13,9 @@ const app = express();
 mongoose.set("strictQuery", false);
 
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, "uploads")));
+app.use(express.static(path.join(__dirname, "public")));
+app.use('/docs', express.static(path.join(__dirname, "docs")));
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 // SET HEADERS FOR API

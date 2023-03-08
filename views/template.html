@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clipboard Health Report</title>
+    <link rel="stylesheet" href="http://localhost:8080/css/invoice.css" />
+  </head>
+  <style></style>
+
+  <body>
+    <div class="invoice">
+      <div class="clipboard-logo-sec">
+        <img src="http://localhost:8080/images/logo.png" />
+      </div>
+
+      <div class="about-clipboard">
+        <h5>Invoice From</h5>
+        <h2>ClipBoard Health</h2>
+        <p><span>phone: </span>(408) 837-0116</p>
+        <p><span>Email: </span>support@clipboardhealth.com</p>
+        <p>2605 Briarwood Drive, New Jersey</p>
+      </div>
+
+      <div class="facility-sec">
+        <img src="{{facilityInfo.facilityImage}}" />
+        <h2>{{facilityInfo.facilityName}}</h2>
+        <div>
+          <span>Invoice Number: </span>
+          <div>{{facilityInfo.invoiceNumber}}</div>
+        </div>
+        <div>
+          <span>Invoice Date: </span>
+          <div>{{facilityInfo.invoiceData}}</div>
+        </div>
+      </div>
+
+      <div class="about-facility">
+        <h5>Invoice To</h5>
+        <h2>{{facilityInfo.facilityManager}}</h2>
+        <p><span>phone: </span>{{facilityInfo.facilityPhone}}</p>
+        <p><span>Location: </span>{{facilityInfo.facilityLocation}}</p>
+        <p>{{facilityInfo.facilityAddress}}</p>
+      </div>
+
+      <h2 class="regular-title">THIS QUARTER AGENTS</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Full Name</th>
+            <th>Location</th>
+            <th>Custom Id</th>
+            <th>Shifts</th>
+            <th>Total Revenue</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {{#each facilityAgents}}
+          <tr>
+            <td>
+              <div class="agent">
+                <span style="{{this.image}}"></span>{{this.name}}
+              </div>
+            </td>
+            <td>{{this.location}}</td>
+            <td>{{this.customId}}</td>
+            <td>{{this.shifts}}</td>
+            <td>{{this.totalIncome}}</td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+
+      <h2 class="regular-title" style="margin-top: 100px">
+        THIS QUARTER SHIFTS
+      </h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>NO.</th>
+            <th>Shift</th>
+            <th>Service</th>
+            <th>Room / Bed</th>
+            <th>Agent</th>
+            <th>Cost</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {{#each shifts}}
+          <tr>
+            <td>{{this.counter}}</td>
+            <td>
+              <div>{{this.date}}</div>
+              <div>{{this.shiftTime}}</div>
+            </td>
+            <td>{{this.service}}</td>
+            <td>{{this.bed}} / {{this.room}}</td>
+            <td>
+              <div class="agent">
+                <span style="{{this.agentImage}}"></span>{{this.agentName}}
+              </div>
+            </td>
+            <td>{{this.cost}}</td>
+          </tr>
+          {{/each}}
+
+          <tr class="table-summary">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="padding-top: 30px">Total Quarter Shifts</td>
+            <td style="padding-top: 30px">{{facilityInfo.shiftsCount}}</td>
+          </tr>
+
+          <tr class="table-summary">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Total Quarter Costs</td>
+            <td>{{facilityInfo.facilityTotalCosts}}</td>
+          </tr>
+
+          <tr class="table-summary">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Total Quarter Tax</td>
+            <td>{{facilityInfo.facilityTax}}</td>
+          </tr>
+
+          <tr class="table-summary-black">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Grand Total</td>
+            <td>{{facilityInfo.grandTotal}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="terms-conditions">
+        <div class="sign">
+          <img src="http://localhost:8080/images/signature.png" />
+          <div class="hr"></div>
+          <span>Authorised Sign</span>
+        </div>
+        <h6>Terms & Conditions</h6>
+        <p>
+          In publishing and graphic design, Lorem ipsum is a placeholder text
+          commonly used to demonstrate the visual form of a document or a
+          typeface without relying on meaningful content. Lorem ipsum may be
+          used as a placeholder before final copy is available.
+        </p>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-items">
+        <div class="footer-item">
+          <span><div></div></span>support@clipboardhealth.com
+        </div>
+        <div class="footer-item">
+          <span><div></div></span>(408) 837-0116
+        </div>
+      </div>
+      <div class="value-brand">WE'D LOVE TO HEAR FROM YOU!</div>
+    </div>
+  </body>
+</html>
